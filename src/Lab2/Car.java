@@ -4,36 +4,38 @@ public class Car{
     private String make; 	// make of the car
     private String model;	// model of the car
     private int year; // year of manufacture
+    private int old;// age of car
     private int  cost;// cost of the car
 
 // Constructor
-public Car(String make, String model, int mark, int cost) {
+public Car(String make, String model, int mark, int cost, int old) {
         this.make = make;
         this.model = model;
         this.year = mark;
         this.cost = cost;
+        this.old = old;
         }
 
 public String toString() {
-        // Returns name and result to be printed by UI
-        return make + " " + model +  "  payed " + cost + " received a " + resultName(year) + " for a mark of " + year;
+        // Returns name and result to be put to screen
+        return make + " " + model +  "  payed " + cost + " received a " + resultName(old) + " for the age of the car " + year;
         }
 
 private String resultName(int rating) {
-        // Translates numeric result to their equivalent grade rating
+        // returns the result of the below depending on what the user input
         String result;
 
         if (rating >= 1 && rating <=3 ) {
-        result = "shiny to new"; 	// #rating one and two equals shiny to new
-        } else if (rating >= 3 && rating == 6) {
-        result = "Merit";		// Rating between 3 and 6 gets Merit
-        } else if (rating >= 6 && rating == 8) {
-            result = "Pass";
+        result = "shiny to new";
+        } else if (rating >= 3 && rating <= 6) {
+        result = "slightly worn";
+        } else if (rating >= 6 && rating <= 8) {
+            result = "past its best ";
         }else if (rating >= 8 && rating <= 10) {
-            result = "Pass";
-            // Rating between 8 and 10 gets Pass
+            result = "shows signs of age ";
+
         } else {
-        result = "banger";		// Otherwise gets Fail
+        result = "banger";
         }
 
         return result;
