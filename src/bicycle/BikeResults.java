@@ -21,16 +21,16 @@ public class BikeResults {
     public void speedUp(int increment) {
         speed = speed + increment;
     }
-    public String test() {
+    public String Biketype() {
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Please enter cost for " + type + "");
+        System.out.println("Please enter type of bike !");
         type = keyboard.next();
         return type;
     }
-    
+
 
     public void printStates() {
         System.out.println("Go:" + randomNumbers + " speed:" +
-                speed + " Make:" +make+ " type "+ type+" Gear "+ gear);
+                speed + " Make:" +make+ " type"+ type+" Gear "+ gear);
     }
 }

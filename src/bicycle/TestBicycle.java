@@ -15,7 +15,7 @@ public class TestBicycle {
         bike1.go(range);
         bike1.speedUp(speed);
         bike1.changeGear(2);
-        bike1.test();
+        bike1.Biketype();
         bike1.printStates();
 
         bike2.go(range);
@@ -23,7 +23,7 @@ public class TestBicycle {
         bike2.changeGear(2);
         bike2.go(40);
         bike2.speedUp(10);
-        bike2.test();
+        bike2.Biketype();
 
         bike2.printStates();
 

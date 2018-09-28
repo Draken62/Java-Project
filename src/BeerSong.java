@@ -2,7 +2,8 @@
 
 public class BeerSong {
     //Here my song begins
-    public void  startSong(){
+
+    public void  drunkSong(){
         //Vars have been got in the View menu
         View a = new View();
         int beerNum = a.Menu();

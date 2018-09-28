@@ -26,7 +26,7 @@ public class View{
 
     public void begin(){
         BeerSong mySong = new BeerSong();
-        mySong.startSong();
+        mySong.drunkSong();
     }
 
     private int setBeerNum() {
