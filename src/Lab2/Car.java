@@ -7,8 +7,8 @@ public class Car{
     private int old;// age of car
     private int  cost;// cost of the car
 
-// Constructor
-public Car(String make, String model, int mark, int cost, int old) {
+    // Constructor for Make model Mark cost old
+    public Car(String make, String model, int mark, int cost, int old) {
         this.make = make;
         this.model = model;
         this.year = mark;
@@ -16,12 +16,12 @@ public Car(String make, String model, int mark, int cost, int old) {
         this.old = old;
         }
 
-public String toString() {
+    public String toString() {
         // Returns name and result to be put to screen
-        return make + " " + model +  "  payed " + cost + " received a " + resultName(old) + " for the age of the car " + year;
+        return make + " " + model +  "  payed " + cost + " received a " + careResult(old) + " for the age of the car " + year;
         }
 
-private String resultName(int rating) {
+    private String careResult(int rating) {
         // returns the result of the below depending on what the user input
         String result;
 
@@ -42,4 +42,4 @@ private String resultName(int rating) {
         }
 
 
-        }
+}

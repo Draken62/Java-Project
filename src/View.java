@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class View{
 
 
-    public int beerNum;
+    private int beerNum;
 
     public Integer Menu() {
 
@@ -29,7 +29,7 @@ public class View{
         mySong.startSong();
     }
 
-    public int setBeerNum() {
+    private int setBeerNum() {
         return beerNum;
     }
 

@@ -26,7 +26,7 @@ public class BeerSong {
                 System.out.println("---------------------------------------");
             }else {
                 System.out.println("No more bottles of beer on the wall");
-                System.out.println("You are now drunk Congrulations");
+                System.out.println("You are now drunk Congratulations");
             }
         }
     }

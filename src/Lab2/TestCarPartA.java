@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class TestCarPartA {
 
             //constant to fixed number of cars
-            private final static int MINCARS = 1;
+            private final static int MINCARS = 20;
 
             public static void main(String[] args) {
                 // List to store all cars  information
@@ -17,13 +17,13 @@ public class TestCarPartA {
                 
                 Scanner keyboard = new Scanner(System.in);
 
-                // We request the amount of cars to process. Needs to be above the MINIMUM
+                // Will ask the user to input some information regarding the number of vehicles
                 int totalAmountOfCars = 0;
                 while (totalAmountOfCars < MINCARS) {
-                    System.out.println("Please enter the amount of cars you are putting into database: ");
+                    System.out.println("Please enter the amount of cars you wish to input: ");
                     totalAmountOfCars = keyboard.nextInt();
                     if (totalAmountOfCars < MINCARS) {
-                        System.out.println("That's too few. You need to record at least " + MINCARS + " per session.");
+                        System.out.println("Way to low can you count " + MINCARS + " !");
                     }
                 }
 
@@ -58,7 +58,7 @@ public class TestCarPartA {
                 // We loop the entire list
 
                 for (Car cardata: Carsrecord) {
-                    // and print each Student object by console
+                    // and print each car to console
                     System.out.println(cardata.toString());
                 }
             }
