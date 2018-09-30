@@ -3,7 +3,7 @@ package PartOne;
 public class BeerSong {
     //Here my song begins
 
-    public  String drunkSong(){
+    public static String drunkSong(){
         //Vars have been got in the View menu
         View a = new View();
         int beerNum = a.Menu();
