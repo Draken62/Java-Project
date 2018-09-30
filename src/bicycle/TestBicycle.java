@@ -1,34 +1,26 @@
 package bicycle;
 
+
+import java.util.Random;
+
 public class TestBicycle {
-    private Integer range;
+    private String make;    // make of the bike
+    private String type; // type of bike
+    private int speed;// speed of bike which is math.random
+    private int go;// I assumed this meant this distance of bike travelled
 
-    public void begin() {
-        int speed = (int) (Math.random()*200);
-        int range = (int) (Math.random()*50);
 
-        // Create two different Bicycle objects
-        BikeResults bike1 = new BikeResults();
-        BikeResults bike2 = new BikeResults();
-
-        // Invoke methods on those objects
-        bike1.go(range);
-        bike1.speedUp(speed);
-        bike1.changeGear(2);
-        bike1.Biketype();
-        bike1.printStates();
-
-        bike2.go(range);
-        bike2.speedUp(speed);
-        bike2.changeGear(2);
-        bike2.go(40);
-        bike2.speedUp(10);
-        bike2.Biketype();
-
-        bike2.printStates();
-
+    public TestBicycle(String make, String type, int go, int speed) {
+        this.make = make;
+        this.type = type;
+        this.speed = speed;
+        this.go = go;
 
     }
 
-}
+    public String toString() {
+        // Returns name and result to be put to screen
+        return  make + " Make of the bike, " + type+" type  of the bike, "+ " Speed the bike travelled =  " + speed + " distance travelled =  " + go + " ! ";
 
+    }
+}
