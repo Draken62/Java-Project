@@ -31,7 +31,7 @@ public class BikeResults {
                 make = keyboard.next();
                 System.out.println("Please enter the the type of the Bike: ");
                 type = keyboard.next();
-                // Used variables to create a new cars object, and add it to the list
+                // Used variables to create a new Bike object, and add it to the list
                 bikeRecord.add(new TestBicycle(make, type, go, speed));
             }
             keyboard.close();
