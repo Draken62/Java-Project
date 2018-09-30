@@ -1,94 +1,67 @@
 package PartOne;
 
+
 import java.util.Scanner;
 
 public class View {
 
-    public void begin() {
+    private boolean quit;
+    public static Integer beerNum = 99;
 
-        BeerSong.drunkSong();
 
+    public static Integer showMenuAndGetResult() {
+        View menu = new View();
+        menu.activate();
+        return null;
     }
 
-    private int setBeerNum(int i) {
-        return beerNum;
+    private void activate() {
+        try (Scanner in = new Scanner(System.in)) {
+            show();
+
+            while (!quit) {
+                System.out.print("Choose menu item: ");
+                int menuItem = in.nextInt();
+
+                if (menuItem == 1)
+                    onMenuItem1(in);
+                else if (menuItem == 2)
+                    onMenuItem2(in);
+                else if (menuItem == 0)
+                    onMenuQuit();
+                else
+                    System.out.println("Invalid choice.");
+            }
+            System.out.println("Bye-bye!");
+        }
     }
 
-
-    private int beerNum;
-
-    public Integer Menu() {
-
-
-        Scanner in = new Scanner(System.in);
-
-        // print menu
-
+    private void show() {
         for (int i = 1; i <= 3; i++)
-
             System.out.println(i + ". Menu item #" + i);
 
         System.out.println("0. Quit");
+        System.out.println();
+    }
 
-        // handle user commands
+    private void onMenuItem1(Scanner scan) {
+        System.out.println("Default ");
+        Menu();
+        // TODO menu 1 logic incapsulation
+    }
 
-        boolean quit = false;
-
-        int menuItem;
-
-        do {
-
-            System.out.print("Choose menu item: ");
-
-            menuItem = in.nextInt();
-
-            switch (menuItem) {
-
-                case 1:
-
-                    System.out.println("Default ");
-                    begin();
-
-
-                    while (true)
-                        try {//where I have made a mistake
-                            return setBeerNum(99);
+    private void onMenuItem2(Scanner scan) {
+        System.out.println("Enter your number to play the song: ");
+        scan.nextInt();
+        BeerSong.drunkSong();
+        // TODO menu 2 logic incapsulation
+    }
+    public void Menu() {
+        BeerSong.drunkSong();
+    }
 
 
-                        } catch (NumberFormatException BecauseIsaidSo) {
-                            System.out.print("Try again: ");
-                        }
-                    //working
-                case 2:
-
-                    System.out.println("Enter your number to play the song: ");
-                    Scanner scan = new Scanner(System.in);
-
-                    while (true)
-                        try {
-                            beerNum = Integer.parseInt(scan.nextLine());
-                            this.beerNum = setBeerNum(99);
-                            return beerNum;
-
-                        } catch (NumberFormatException BecauseIsaidSo) {
-                            System.out.print("Try again: ");
-                        }
-                case 0:
-
-                    quit = true;
-
-                    break;
-
-                default:
-
-                    System.out.println("Invalid choice.");
-            }
-        }
-        while (!quit) ;
-
-        System.out.println("Bye-bye!");
-        return null;
+    private void onMenuQuit() {
+          quit = true;
     }
 }
-
-

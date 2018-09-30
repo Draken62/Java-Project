@@ -1,12 +1,14 @@
 package PartOne;
 
-public class BeerSong {
-    //Here my song begins
+import static PartOne.View.beerNum;
 
-    public static String drunkSong(){
+public class BeerSong {
+
+     //Here my song begins
+
+    public static void drunkSong(){
+
         //Vars have been got in the View menu
-        View a = new View();
-        int beerNum = a.Menu();
 
         String word = "bottles";
 
@@ -30,6 +32,5 @@ public class BeerSong {
                 System.out.println("You are now drunk Congratulations");
             }
         }
-        return word;
     }
 }
