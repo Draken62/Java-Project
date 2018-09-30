@@ -6,7 +6,7 @@ public class Main {
 
 
         View myInstance = new View();
-        myInstance.begin();
+        myInstance.Menu();
 
 
     }

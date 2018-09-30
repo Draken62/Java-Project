@@ -3,7 +3,7 @@ package PartOne;
 public class BeerSong {
     //Here my song begins
 
-    public void  drunkSong(){
+    public  String drunkSong(){
         //Vars have been got in the View menu
         View a = new View();
         int beerNum = a.Menu();
@@ -30,5 +30,6 @@ public class BeerSong {
                 System.out.println("You are now drunk Congratulations");
             }
         }
+        return word;
     }
 }
