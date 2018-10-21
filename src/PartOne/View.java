@@ -14,6 +14,7 @@ public class View {
         menu.activate();
         return null;
     }
+    //This is my menu displayed to user
 
     private void activate() {
         try (Scanner in = new Scanner(System.in)) {
@@ -59,7 +60,6 @@ public class View {
     public void Menu() {
         BeerSong.drunkSong();
     }
-
 
     private void onMenuQuit() {
           quit = true;
